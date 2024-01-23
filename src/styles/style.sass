@@ -45,22 +45,49 @@ body
     flex-direction: column
     min-height: 100vh
     align-items: center
+
+@media screen and (min-width: 600px)
+    body
+        background: $dark-slate-grey
+        justify-content: center
  
 .form
     max-width: 37.5rem
+
+@media screen and (min-width: 600px)
+    .form
+        max-width: 850px
+        background: $white
+        padding: 2rem
+        border-radius: 12px
 
 .preSignup
     display: grid
     grid-template-areas: "image" "info"
 
+@media screen and (min-width: 600px)
+    .preSignup
+        grid-template-areas: "info image"
+        grid-template-columns: 55% 45%
 
 .backgroundContainer
     grid-area: image
-    
 
+@media screen and (min-width: 600px)
+    .backgroundContainer img
+        height: 52rem
+        border-radius: 12px
+        object-position: 60%
+    
 .infoContainer
     grid-area: info
     padding-inline: 2.5rem
+
+@media screen and (min-width: 600px)
+    .infoContainer
+        display: flex
+        flex-direction: column
+        padding-right: 6rem
 
 .preTitle
     margin-block: 4rem 2rem
@@ -68,16 +95,29 @@ body
     color: $dark-slate-grey
     font-size: 4rem
 
+@media screen and (min-width: 600px)
+    .preTitle
+        font-size: 5.5rem
+        margin-block: 4rem 2rem
+
 .preDesc
     color: $dark-slate-grey
     margin-bottom: 3rem
     line-height: 2.5rem
+
+@media screen and (min-width: 600px)
+    .preDesc
+        margin-bottom: 1.5rem
 
 ul
     display: flex
     flex-direction: column
     gap: 1rem
     margin-bottom: 4rem
+
+@media screen and (min-width: 600px)
+    ul
+        margin-bottom: 3rem
 
 li
     list-style: none
@@ -87,6 +127,10 @@ li
     p
         line-height: 2.4rem
         color: $dark-slate-grey
+
+@media screen and (min-width: 600px)
+    li
+        gap: 1.3rem
 
 .iconList
     position: relative
@@ -98,6 +142,10 @@ li
     display: flex
     flex-direction: column
     gap: 1rem
+
+@media screen and (min-width: 600px)
+    .inputContainer
+        gap: 1rem
 
 label[for="email"]
     color: $dark-slate-grey
@@ -113,6 +161,10 @@ input#email
     border: 1px solid lighten($grey, 20%)
     &::placeholder
         font-size: 1.4rem
+
+@media screen and (min-width: 600px)
+    input#email
+        margin-bottom: 1rem
 
 .subButton
     width: 100%
